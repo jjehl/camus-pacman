@@ -24,3 +24,4 @@ for element in stuff1.locate:
     element[0]
     print()
     print(element[0])
+    print("toto")
