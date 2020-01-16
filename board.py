@@ -10,30 +10,25 @@ import pygame
 
 pygame.init()
 
-H=750
-L=750
-nbH=15
-nbL=15
+t=50
+H=850
+L=850
+
 ecran = pygame.display.set_mode((H ,L))
+
 wall = pygame.image.load("wall brick.png").convert_alpha()
 
 liste_wall = []
 with open('lvl1.txt', "r") as file:
     for y,line in enumerate(file):
+        y = y * t
         for x,carac in enumerate(line):
+            x = x * t
             if carac=="o":
+                ecran.blit(wall, (x,y))
                 print (carac,(x,y))
                 liste_wall.append((x, y))
-
-
-position_wall = wall.get_rect()
-
-
-
-
-
-
-
+                
 pygame.display.flip()
 
 continuer = 1
