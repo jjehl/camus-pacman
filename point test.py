@@ -9,14 +9,14 @@ import pygame
 
 pygame.init()
 
-t=50
+p=50
 H=850
 L=850
 
 ecran = pygame.display.set_mode((H ,L))
 
 fond = pygame.image.load("fond.png").convert_alpha()
-point = pygame.image.load("rond multicolor.png").convert_alpha()
+point = pygame.image.load("point.png").convert_alpha()
 
 #ecran.blit(fond, (0,0))
 

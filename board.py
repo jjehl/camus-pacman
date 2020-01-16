@@ -20,7 +20,7 @@ L=850
 ecran = pygame.display.set_mode((H ,L))
 
 fond = pygame.image.load("fond.png").convert_alpha()
-wall = pygame.image.load("wall brick.png").convert_alpha()
+wall = pygame.image.load("wall.png").convert_alpha()
 
 ecran.blit(fond, (0,0))
 
@@ -34,7 +34,6 @@ with open('lvl1.txt', "r") as file:
                 ecran.blit(wall, (x,y))
                 #print (carac,(x,y))
                 liste_wall.append((x, y))
-
 
 pygame.display.flip()
 
