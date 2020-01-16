@@ -41,20 +41,25 @@ perso = pygame.image.load("perso.png").convert_alpha()
 fraise = pygame.image.load("fraise3.png")
 banane = pygame.image.load("banane.png")
 lampe = pygame.image.load("lampe.png")
+point = pygame.image.load("rond multicolor.png")
 position_perso = perso.get_rect()
 position_fraise = fraise.get_rect()
 position_banane = banane.get_rect()
 position_lampe = lampe.get_rect()
+position_point = point.get_rect()
 position_fraise.y = 300
 position_fraise.x = 280
 position_banane.x = 360
 position_banane.y = 300
 position_lampe.x = 320
 position_lampe.y = 240
+position_point.y = 50
+position_point.x = 50
 fenetre.blit(perso, position_perso)
 fenetre.blit(fraise,position_fraise)
 fenetre.blit(banane,position_banane)
 fenetre.blit(lampe,position_lampe)
+fenetre.blit(point,position_point)
 #Rafraîchissement de l'écran
 pygame.display.flip()
 
@@ -86,6 +91,7 @@ while continuer:
     fenetre.blit(fraise,position_fraise)
     fenetre.blit(banane,position_banane)
     fenetre.blit(lampe,position_lampe)
+    fenetre.blit(point,position_point)
     #Rafraichissement
     pygame.display.flip()
     
