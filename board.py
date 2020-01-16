@@ -32,8 +32,9 @@ with open('lvl1.txt', "r") as file:
             x = x * t
             if carac=="o":
                 ecran.blit(wall, (x,y))
-                #print (carac,(x,y))
+                print (carac,(x,y))
                 liste_wall.append((x, y))
+
 
 pygame.display.flip()
 
