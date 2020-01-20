@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jan 16 15:19:21 2020
-
-@author: mathis.vigier
+Created on Mon Jan 20 15:19:21 2020
 """
 
 import pygame
@@ -16,7 +14,7 @@ L=850
 ecran = pygame.display.set_mode((H ,L))
 
 fond = pygame.image.load("fond.png").convert_alpha()
-point = pygame.image.load("point.png").convert_alpha()
+point = pygame.image.load("rond multicolor1.png").convert_alpha()
 
 #ecran.blit(fond, (0,0))
 
