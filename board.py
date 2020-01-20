@@ -37,7 +37,7 @@ with open('lvl1.txt', "r") as file:
 
 
 pygame.display.flip()
-
+ecran = pygame.display.set_mode((H ,L))
 continuer = 1
 
 while continuer :
