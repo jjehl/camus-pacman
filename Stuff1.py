@@ -26,7 +26,7 @@ for element in stuff1.locate:
     print(element[0],(","),element[1])
     
     
-
+import random
 import pygame
 from pygame.locals import *
 
@@ -65,16 +65,20 @@ with open('lvl1.txt', "r") as file:
 pygame.display.flip()
 
 continuer = 1
+liste_fraise = []
+
+
 
 while continuer :
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             continuer = 0
+
 position_perso = perso.get_rect()
 position_fraise = fraise.get_rect()
 position_banane = banane.get_rect()
 position_lampe = lampe.get_rect()
-position_fraise.y = 300
+position_fraise.y = random.randint(1, 17)
 position_fraise.x = 280
 position_banane.x = 360
 position_banane.y = 300
