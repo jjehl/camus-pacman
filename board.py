@@ -18,26 +18,31 @@ H=850
 L=850
 
 ecran = pygame.display.set_mode((H ,L))
-
 fond = pygame.image.load("fond.png").convert_alpha()
 wall = pygame.image.load("wall.png").convert_alpha()
 
 ecran.blit(fond, (0,0))
 
+liste_tab = []
+tab = []
 liste_wall = []
+
 with open('lvl1.txt', "r") as file:
     for y,line in enumerate(file):
         y = y * t
         for x,carac in enumerate(line):
             x = x * t
             if carac=="o":
+                liste_tab.append(1)
                 ecran.blit(wall, (x,y))
                 print (carac,(x,y))
-                liste_wall.append((x, y))
-
+                liste_wall.append((x, y))   
+            else:
+                liste_tab.append(0)
+        print (liste_tab)
+        tab.append(liste_tab)
 
 pygame.display.flip()
-ecran = pygame.display.set_mode((H ,L))
 continuer = 1
 
 while continuer :
