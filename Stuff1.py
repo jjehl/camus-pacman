@@ -50,9 +50,9 @@ fond = pygame.image.load("fond.png").convert_alpha()
 
 multicolor1 = pygame.image.load("rond multicolor1.png").convert_alpha()
 
-#ecran.blit(fond, (0,0))
 
-liste_wall = []
+random.seed()
+liste_test = []
 with open('lvl1.txt', "r") as file:
     for o,line in enumerate(file):
         o = o * p
@@ -61,13 +61,36 @@ with open('lvl1.txt', "r") as file:
             if carac=="-":
                 ecran.blit(multicolor1, (n,o))
                 #print (carac,(x,y))
-                liste_wall.append((n,o))
-pygame.display.flip()
+                liste_test.append((n,o))
+
+
+wall = pygame.image.load("wall.png").convert_alpha()
+
+liste_tab = []
+tab = []
+liste_wall = []
+
+with open('lvl1.txt', "r") as file:
+    for y,line in enumerate(file):
+        y = y * t
+        for x,carac in enumerate(line):
+            x = x * t
+            if carac=="o":
+                liste_tab.append(1)
+                ecran.blit(wall, (x,y))
+                print (carac,(x,y))
+                liste_wall.append((x, y))   
+            else:
+                liste_tab.append(0)
+        print (liste_tab)
+        tab.append(liste_tab)
 
 continuer = 1
 liste_fraise = []
 
-
+random.seed()
+r = random.randint(1, 17)*50
+i = random.randint(1, 17)*50
 
 while continuer :
     for event in pygame.event.get():
@@ -78,8 +101,8 @@ position_perso = perso.get_rect()
 position_fraise = fraise.get_rect()
 position_banane = banane.get_rect()
 position_lampe = lampe.get_rect()
-position_fraise.y = random.randint(1, 17)
-position_fraise.x = 280
+position_fraise.y = r
+position_fraise.x = i
 position_banane.x = 360
 position_banane.y = 300
 position_lampe.x = 320
@@ -113,7 +136,6 @@ while continuer:
                 position_perso = position_perso.move(-3,0)
     
     
-    ecran.fill((150,0,255))
     #Re-collage
     ecran.blit(perso, position_perso)
     ecran.blit(fraise,position_fraise)
