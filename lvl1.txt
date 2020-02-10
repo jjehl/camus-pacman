@@ -1,8 +1,8 @@
 ooooooooooooooooo
-o---------------o
+ox-------------xo
 o-oooo-ooo-oooo-o
 o-oooo-ooo-oooo-o
-o---------------o
+o-----x---x-----o
 o-oooo-ooo-oooo-o
 o---oo-ooo-oo---o
 ooo-oo-----oo-ooo
@@ -10,8 +10,8 @@ ooo-oo-----oo-ooo
 ooo-oo-----oo-ooo
 o---oo-ooo-oo---o
 o-oooo-ooo-oooo-o
-o---------------o
+o-----x---x-----o
 o-oooo-ooo-oooo-o
 o-oooo-ooo-oooo-o
-o---------------o
+ox-------------xo
 ooooooooooooooooo

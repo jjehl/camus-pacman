@@ -47,7 +47,7 @@ fraise = pygame.image.load("fraise3.png")
 banane = pygame.image.load("banane.png")
 lampe = pygame.image.load("lampe.png")
 fond = pygame.image.load("fond.png").convert_alpha()
-
+point = pygame.image.load("point.png")
 multicolor1 = pygame.image.load("rond multicolor1.png").convert_alpha()
 
 
@@ -59,7 +59,7 @@ with open('lvl1.txt', "r") as file:
         for n,carac in enumerate(line):
             n = n * p
             if carac=="-":
-                ecran.blit(multicolor1, (n,o))
+                ecran.blit(point, (n,o))
                 #print (carac,(x,y))
                 liste_test.append((n,o))
 
@@ -82,6 +82,13 @@ with open('lvl1.txt', "r") as file:
                 liste_wall.append((x, y))   
             else:
                 liste_tab.append(0)
+            if carac=="x":
+                liste_tab.append(1)
+                ecran.blit(multicolor1, (x,y))
+                print (carac,(x,y))
+                liste_wall.append((x, y))   
+            else:
+                liste_tab.append(0)   
         print (liste_tab)
         tab.append(liste_tab)
 
@@ -89,8 +96,12 @@ continuer = 1
 liste_fraise = []
 
 random.seed()
-r = random.randint(1, 17)*50
-i = random.randint(1, 17)*50
+with open('lvl1.txt', "r") as file:
+        r = random.randint(1, 17)*50
+        i = random.randint(1, 17)*50
+        while r==carac=="o":
+            r = random.randint(1, 17)*50
+            i = random.randint(1, 17)*50
 
 while continuer :
     for event in pygame.event.get():
