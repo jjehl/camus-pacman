@@ -57,7 +57,7 @@ while continuer:
                 #On descend le perso
                 x=-3 
                 y=0
-    time.sleep(0.2)
+    time.sleep(0.004)
     position_perso = position_perso.move(x,y)
     fenetre.fill((55,86,34))
     #Re-collage
